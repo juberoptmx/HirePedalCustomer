@@ -33,6 +33,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.hirepedal.customer.R
 import com.hirepedal.customer.activities.RootActivity
 import com.hirepedal.customer.base.BaseFragment
@@ -56,7 +58,44 @@ class DashboardFragment : BaseFragment(), GoogleApiClient.ConnectionCallbacks, G
     private var locationUpdateState = false
     private var cartItemList = ArrayList<CartItem>()
 
+
+    fun isItemExist(searchCartItem: CartItem): Boolean {
+        val cartItems: ArrayList<CartItem>?
+        cartItems = Gson().fromJson(SharedPreferenceManager.getCartData(context), object : TypeToken<ArrayList<CartItem>>() {
+
+        }.type)
+        if (cartItems != null) {
+            for (nfcTag in cartItems) {
+                if (nfcTag.cycleId!!.equals(searchCartItem.cycleId)) {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+
+    fun saveCartDetails(){
+        var cartItems: ArrayList<CartItem>?
+        val cart = CartItem("Sangam Cycle Shop", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_cycle),
+                "Roadsters", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_hercules_c1),
+                26.9510036, 75.7577134)
+        cartItems = Gson().fromJson(SharedPreferenceManager.getCartData(context), object : TypeToken<ArrayList<CartItem>>() {
+
+        }.type)
+
+        if (cartItems == null) {
+            cartItems = ArrayList<CartItem>()
+        }
+
+      //  if (isItemExist(cart)){
+            cartItems.add(cart)
+            SharedPreferenceManager.saveCartData(RootActivity.rootActivity,cartItems)
+      //  }
+
+    }
     private fun initializePlaces(){
+
+       // saveCartDetails()
 
         // Hercules
         cartItemList.add(CartItem("Sangam Cycle Shop", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_cycle),

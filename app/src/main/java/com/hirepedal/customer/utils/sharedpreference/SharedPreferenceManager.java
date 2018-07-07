@@ -36,11 +36,12 @@ public class SharedPreferenceManager {
         return getSharedPreference(context).getString(context.getString(R.string.pref_feature),null);
     }
 
-    public static void saveCartData(Context context, CartItem cartItem) {
-        getSharedPreferenceEditor(context).putString(context.getString(R.string.cart), new Gson().toJson(cartItem)).commit();
+
+    public static void saveCartData(Context context, ArrayList<CartItem> cartItems){
+        getSharedPreferenceEditor(context).putString(context.getString(R.string.cart),new Gson().toJson(cartItems)).commit();
     }
 
-    public static String getCartData(Context context) {
+    public static String getCartData(Context context){
         return getSharedPreference(context).getString(context.getString(R.string.cart), null);
     }
 

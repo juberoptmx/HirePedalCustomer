@@ -22,22 +22,10 @@ class CartAdapter(internal var context: Context, private var cartList:List<CartI
     private val fragmentCommunicator = context as FragmentCommunicator
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
-        getCartItems()
+
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_cart,parent,false)
         return CartViewHolder(view)
     }
-
-    private fun getCartItems() {
-        var cartItemList = ArrayList<String>()
-
-        try {
-            cartItemList = Gson().fromJson<ArrayList<String>>(SharedPreferenceManager.getCartData(RootActivity.rootActivity), object : TypeToken<ArrayList<String>>() {}.type)
-        }catch (e:Exception){
-            cartItemList = ArrayList<String>()
-        }
-
-    }
-
 
     override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
         val cartItem = cartList[position]

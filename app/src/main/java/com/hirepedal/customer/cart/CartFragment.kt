@@ -7,9 +7,12 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.hirepedal.customer.R
 import com.hirepedal.customer.activities.RootActivity
 import com.hirepedal.customer.base.BaseFragment
+import com.hirepedal.customer.utils.sharedpreference.SharedPreferenceManager
 import java.util.*
 import kotlinx.android.synthetic.main.fragment_cart.*
 
@@ -22,6 +25,15 @@ class CartFragment: BaseFragment(), CartListener {
         super.onCreate(savedInstanceState)
         getCartItems()
         setHasOptionsMenu(true)
+    }
+
+
+    private fun getCartItems1() : ArrayList<CartItem>{
+        return try{
+            Gson().fromJson<ArrayList<CartItem>>(SharedPreferenceManager.getCartData(RootActivity.rootActivity), object : TypeToken<ArrayList<CartItem>>() {}.type)
+        }catch (e:Exception){
+            ArrayList(emptyList())
+        }
     }
 
     private fun getCartItems() {
