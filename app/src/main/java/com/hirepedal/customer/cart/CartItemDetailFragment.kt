@@ -9,8 +9,6 @@ import com.hirepedal.customer.base.BaseFragment
 
 class CartItemDetailFragment: BaseFragment() {
 
-
-
     override fun onClick(p0: View?) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

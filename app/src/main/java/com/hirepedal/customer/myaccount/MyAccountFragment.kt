@@ -34,15 +34,12 @@ import java.io.File
 class MyAccountFragment : BaseFragment() {
 
     private var infoList = ArrayList<FormItem>()
-//    private var myAccountInfo: HashMap<String,String>? = null
-
     private var nameLabel: TextView? = null
     private var emailLabel: TextView? = null
     private var saveButton: Button? = null
     private var removeAccButton:Button? = null
     private var editPhotoButton:Button? = null
     private var profilePicView:ImageView? = null
-
     private val GALLERY_REQUEST = 101
     private val CAMERA_REQUEST = 1888
     private val MY_CAMERA_PERMISSION_CODE = 100

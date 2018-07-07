@@ -1,6 +1,5 @@
 package com.hirepedal.customer.activities;
 
-
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;

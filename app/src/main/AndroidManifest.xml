@@ -23,18 +23,9 @@
         android:screenOrientation="portrait"
         >
 
-        <!--<meta-data-->
-            <!--android:name="com.google.android.geo.API_KEY"-->
-            <!--android:value="AIzaSyBozCxXv6waWguoxrVovZrafkdITqWimq8" />-->
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCwXcFWbS3teX2bUCqGmKxk-P4maiDB0Yo" />
-
-
-        <!--<meta-data-->
-            <!--android:name="com.google.android.geo.API_KEY"-->
-            <!--android:value="AIzaSyBI-DH7mQbBdFCsDZ3MERwP3kQxNe_aLJg" />-->
 
         <activity android:name=".activities.RootActivity"
             android:configChanges="orientation"

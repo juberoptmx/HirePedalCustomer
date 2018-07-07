@@ -5,7 +5,6 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
-import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import android.location.Address
@@ -40,8 +39,6 @@ import com.hirepedal.customer.base.BaseFragment
 import com.hirepedal.customer.cart.CartFragment
 import com.hirepedal.customer.cart.CartItem
 import com.hirepedal.customer.utils.sharedpreference.SharedPreferenceManager
-import okhttp3.MediaType
-import okhttp3.OkHttpClient
 import java.io.IOException
 import java.util.*
 
@@ -50,10 +47,6 @@ class DashboardFragment : BaseFragment(), GoogleApiClient.ConnectionCallbacks, G
 
     private lateinit var mGoogleApiClient: GoogleApiClient
     private var mLocationManager: LocationManager? = null
-
-
-
-
     private lateinit var map: GoogleMap
     private lateinit var mMapFragment: SupportMapFragment
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -61,10 +54,7 @@ class DashboardFragment : BaseFragment(), GoogleApiClient.ConnectionCallbacks, G
     private lateinit var locationCallback: LocationCallback
     private lateinit var locationRequest: LocationRequest
     private var locationUpdateState = false
-
     private var cartItemList = ArrayList<CartItem>()
-
-
 
     private fun initializePlaces(){
 

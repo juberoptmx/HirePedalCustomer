@@ -22,7 +22,7 @@ class CartAdapter(internal var context: Context, private var cartList:List<CartI
     private val fragmentCommunicator = context as FragmentCommunicator
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
-      //  getCartItems()
+        //  getCartItems()
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_cart,parent,false)
         return CartViewHolder(view)
     }
@@ -49,7 +49,6 @@ class CartAdapter(internal var context: Context, private var cartList:List<CartI
             fragmentCommunicator.showFragment(cartItemDetailFragment)
 
         }
-
 
     }
 
