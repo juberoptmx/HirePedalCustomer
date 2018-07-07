@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
+import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import android.location.Address
@@ -37,20 +38,21 @@ import com.hirepedal.customer.R
 import com.hirepedal.customer.activities.RootActivity
 import com.hirepedal.customer.base.BaseFragment
 import com.hirepedal.customer.cart.CartFragment
+import com.hirepedal.customer.cart.CartItem
 import com.hirepedal.customer.utils.sharedpreference.SharedPreferenceManager
 import okhttp3.MediaType
 import okhttp3.OkHttpClient
 import java.io.IOException
-
+import java.util.*
 
 
 class DashboardFragment : BaseFragment(), GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener, OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private lateinit var mGoogleApiClient: GoogleApiClient
     private var mLocationManager: LocationManager? = null
-    val client = OkHttpClient()
 
-    val JSON = MediaType.parse("application/json; charset=utf-8")
+
+
 
     private lateinit var map: GoogleMap
     private lateinit var mMapFragment: SupportMapFragment
@@ -60,13 +62,107 @@ class DashboardFragment : BaseFragment(), GoogleApiClient.ConnectionCallbacks, G
     private lateinit var locationRequest: LocationRequest
     private var locationUpdateState = false
 
+    private var cartItemList = ArrayList<CartItem>()
 
+
+
+    private fun initializePlaces(){
+
+
+
+
+        // Hercules
+        cartItemList.add(CartItem("Hercules", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Roadsters", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.9510036, 75.7577134))
+        cartItemList.add(CartItem("Hercules", 2, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Roadeo", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.903857, 75.821208))
+        cartItemList.add(CartItem("Hercules", 3, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Ryders", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.9359042, 75.7114598))
+        cartItemList.add(CartItem("Hercules", 4, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Turbodrive MTB", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.996827, 75.902208))
+        cartItemList.add(CartItem("Hercules", 5, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "CMX", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.829615, 75.644113))
+
+        // BSA
+        cartItemList.add(CartItem("BSA", 6, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Champ", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.943993, 75.809052))
+        cartItemList.add(CartItem("BSA", 7, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Toddlers", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.996200, 75.828222))
+        cartItemList.add(CartItem("BSA", 7, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Ladybird", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.938494, 75.632905))
+        cartItemList.add(CartItem("BSA", 8, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Workouts", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.929836, 75.840632))
+        cartItemList.add(CartItem("BSA", 9, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Jr. Roadsters", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                27.030329, 75.623733))
+        cartItemList.add(CartItem("BSA", 10, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Roadsters", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.898083, 75.895666))
+
+
+
+        // Hero Cycles
+        cartItemList.add(CartItem("Hero Cycles", 11, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Maxim Fun Series", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.898083, 75.752146))
+
+        cartItemList.add(CartItem("Hero Cycles", 12, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Special Kidz Bikes", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.913960, 75.839553))
+        cartItemList.add(CartItem("Hero Cycles", 13, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Super Start Series", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                27.066849, 75.602690))
+        cartItemList.add(CartItem("Hero Cycles", 14, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "SLR", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.903291, 75.812023))
+        cartItemList.add(CartItem("Hero Cycles", 15, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Ranger MTB/ATB", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.9068372, 75.7992979))
+        cartItemList.add(CartItem("Hero Cycles", 16, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "City Bikes", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.872220, 75.812781))
+        cartItemList.add(CartItem("Hero Cycles", 17, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Roadsters", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.929565, 75.757142))
+        cartItemList.add(CartItem("Hero Cycles", 18, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Hero Sprint", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.961072, 75.846072))
+        cartItemList.add(CartItem("Hero Cycles", 19, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "ATB", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.928752, 26.928752))
+        cartItemList.add(CartItem("Hero Cycles", 19, "Jayanagar", resources.getDrawable(R.drawable.ic_airplane),
+                "Master Blasters", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_apps_color),
+                26.880966, 75.752126))
+
+
+    }
+
+
+    private fun placeCyclesOnMarker() {
+        for (cartItem in cartItemList) {
+            val currentLatLng = LatLng(cartItem?.pLat!!, cartItem?.pLong!!)
+            val markerOptions = MarkerOptions().position(currentLatLng).title(cartItem.partnerName)
+            markerOptions.icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(resources, R.drawable.ic_cycle)))
+            map.addMarker(markerOptions)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
 
         initializeGoogleAPIClient()
+
+
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(activity!!)
 
@@ -85,16 +181,16 @@ class DashboardFragment : BaseFragment(), GoogleApiClient.ConnectionCallbacks, G
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
         setUpMap()
+        initializePlaces()
+        placeCyclesOnMarker()
     }
-
-
 
     private fun placeMarkerOnMap(location: LatLng) {
         val markerOptions = MarkerOptions().position(location).title("Your Location")
         val titleStr = getAddress(location)
         markerOptions.icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(resources, R.drawable.ic_user_location)))
-        //        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
-      //  markerOptions.title(titleStr)
+        //  markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+        //  markerOptions.title(titleStr)
         map.addMarker(markerOptions)
 
     }
@@ -178,6 +274,8 @@ class DashboardFragment : BaseFragment(), GoogleApiClient.ConnectionCallbacks, G
         attachListeners()
         mMapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mMapFragment.getMapAsync(this)
+
+
         return v
     }
 
@@ -203,6 +301,8 @@ class DashboardFragment : BaseFragment(), GoogleApiClient.ConnectionCallbacks, G
         //GoogleMap.MAP_TYPE_NORMAL
         //GoogleMap.MAP_TYPE_SATELLITE
         //GoogleMap.MAP_TYPE_HYBRID
+
+        // Rajasthan - Jaipur : 26.9134799,75.7293832
 
         fusedLocationClient.lastLocation.addOnSuccessListener { location ->
             if (location != null) {

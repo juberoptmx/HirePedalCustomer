@@ -14,33 +14,26 @@ import com.hirepedal.customer.R
 import com.hirepedal.customer.activities.RootActivity
 import com.hirepedal.customer.base.FragmentCommunicator
 import com.hirepedal.customer.utils.sharedpreference.SharedPreferenceManager
-import com.titan.fasttrack.myapps.CartItem
 import java.util.*
 
 
-class CartAdapter(internal var context: Context, private var cartList:List<CartItem>, private var cartListener: CartListener) : RecyclerView.Adapter<CartAdapter.CartViewHolder>(){
+class CartAdapter(internal var context: Context, private var cartList:List<CartItem>) : RecyclerView.Adapter<CartAdapter.CartViewHolder>(){
 
     private val fragmentCommunicator = context as FragmentCommunicator
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
-        setCurrentStateOfMyApps()
+      //  getCartItems()
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_cart,parent,false)
         return CartViewHolder(view)
     }
 
-    private fun setCurrentStateOfMyApps() {
-        var selectedAppList = ArrayList<String>()
+    private fun getCartItems() {
+        var cartItemList = ArrayList<String>()
 
-                try {
-                    selectedAppList = Gson().fromJson<ArrayList<String>>(SharedPreferenceManager.getMyApps(RootActivity.rootActivity), object : TypeToken<ArrayList<String>>() {}.type)
-                }catch (e:Exception){
-                    selectedAppList = ArrayList<String>()
-                }
-
-        for (appItem in cartList) {
-            if (selectedAppList.contains(appItem.packageName.toString())){
-                appItem.isSelected = true
-            }
+        try {
+            cartItemList = Gson().fromJson<ArrayList<String>>(SharedPreferenceManager.getMyApps(RootActivity.rootActivity), object : TypeToken<ArrayList<String>>() {}.type)
+        }catch (e:Exception){
+            cartItemList = ArrayList<String>()
         }
 
     }
@@ -48,8 +41,8 @@ class CartAdapter(internal var context: Context, private var cartList:List<CartI
 
     override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
         val cartItem = cartList[position]
-        holder.imageView.setImageDrawable(cartItem.image)
-        holder.title.text = cartItem.title
+        holder.imageView.setImageDrawable(cartItem.pImage)
+        holder.title.text = cartItem.cycleName
         holder.rootLayout.setOnClickListener {view ->
 
             var cartItemDetailFragment : CartItemDetailFragment = CartItemDetailFragment()

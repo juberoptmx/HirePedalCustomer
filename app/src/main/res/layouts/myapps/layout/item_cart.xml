@@ -40,17 +40,6 @@
             android:textSize="12sp"
 
             />
-
-        <Switch
-            android:id="@+id/s_selection"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-
-            android:gravity="right"
-            android:text="" />
-
     </LinearLayout>
 
     <!--<LinearLayout-->
