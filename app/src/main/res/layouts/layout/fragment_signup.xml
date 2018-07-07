@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/drawable_gradient_primary_background"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_sign_up"
+        android:textColor="@color/color_white"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_sign_up_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_name"
+        android:inputType="textCapWords"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/drawable_edittext_background"
+        />
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_mobile_number"
+            android:inputType="phone"
+            android:layout_marginStart="4dp"
+            android:maxLength="10"
+            android:background="@drawable/drawable_edittext_background"
+            />
+    </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_weight="1"
+        app:cardElevation="4dp">
+        <Spinner
+            android:id="@+id/et_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_gender"
+            android:layout_marginStart="4dp"
+            android:entries="@array/gender"
+            android:background="@drawable/drawable_edittext_background"
+            />
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_weight="1"
+        app:cardElevation="4dp">
+
+        <Spinner
+            android:id="@+id/et_blood_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/drawable_edittext_background"
+            android:entries="@array/blood_group"
+            android:hint="@string/hint_blood_group" />
+    </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_address_line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_address1"
+            android:inputType="textCapWords"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/drawable_edittext_background"
+            />
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_address_line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_address2"
+            android:inputType="textCapWords"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/drawable_edittext_background"
+            />
+    </android.support.v7.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_weight="1"
+        app:cardElevation="4dp">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_city"
+            android:inputType="textCapWords"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/drawable_edittext_background"
+            />
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_weight="1"
+        app:cardElevation="4dp">
+        <Spinner
+            android:id="@+id/et_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/drawable_edittext_background"
+            android:entries="@array/states"
+            />
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_company"
+            android:inputType="textCapWords"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/drawable_edittext_background"
+            />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_designation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_designation"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/drawable_edittext_background"
+            android:inputType="textCapWords"
+            />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_work_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_work_phone"
+            android:inputType="phone"
+            android:layout_marginStart="4dp"
+            android:maxLength="10"
+            android:background="@drawable/drawable_edittext_background"
+            />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_work_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_work_email"
+            android:inputType="textEmailAddress"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/drawable_edittext_background"
+            />
+    </android.support.v7.widget.CardView>
+
+     <Button
+         android:id="@+id/btn_submit"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/text_submit"
+         android:layout_gravity="center_horizontal"
+         android:layout_margin="16dp"
+         android:textColor="@color/color_primary_black"
+         android:background="@color/color_white"
+         />
+    </LinearLayout>
+</ScrollView>

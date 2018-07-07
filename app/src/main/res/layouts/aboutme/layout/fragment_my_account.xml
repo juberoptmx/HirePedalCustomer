@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_my_acoount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_my_account_remove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/scrollViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/img_my_account_profile"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="28dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="w,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bg_dashboard" />
+
+            <Button
+                android:id="@+id/btn_my_account_edit_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/ic_edit_profile_img"
+                app:layout_constraintBottom_toBottomOf="@+id/img_my_account_profile"
+                app:layout_constraintEnd_toEndOf="@+id/img_my_account_profile"
+                app:layout_constraintStart_toEndOf="@+id/img_my_account_profile"
+                app:layout_constraintTop_toTopOf="@+id/img_my_account_profile"
+                app:layout_constraintVertical_bias="0.9" />
+
+            <TextView
+                android:id="@+id/label_my_account_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:text="Anushka"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_my_account_profile" />
+
+            <TextView
+                android:id="@+id/label_my_account_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="anushka@gmail.com"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_my_account_name" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/rounded_corner_white_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/rv_my_account"
+                app:layout_constraintEnd_toEndOf="@+id/rv_my_account"
+                app:layout_constraintStart_toStartOf="@+id/rv_my_account"
+                app:layout_constraintTop_toTopOf="@+id/rv_my_account"
+                app:srcCompat="@drawable/animated_vector_check" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_my_account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:elevation="2dp"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp"
+                android:scrollbars="none"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_my_account_email">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/btn_my_account_save"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_corner"
+                android:text="SAVE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_my_account" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_my_account_remove"
+        style="@android:style/Widget.Material.Light.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#505050"
+        android:padding="0dp"
+        android:text="Remove Account"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/dashboard"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:checkable="false"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+    </group>
+
+
+    <group android:id="@+id/my_account">
+        <item
+            android:id="@+id/nav_my_account"
+            android:icon="@drawable/ic_my_account"
+            android:title="@string/my_account" />
+    </group>
+    <!--<group android:id="@+id/manage_tags">-->
+        <!--<item-->
+            <!--android:id="@+id/nav_manage_tags"-->
+            <!--android:icon="@drawable/ic_lock_color"-->
+            <!--android:title="@string/manage_tags" />-->
+    <!--</group>-->
+    <group
+        android:id="@+id/about_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_about_us"
+            android:title="@string/about_us" />
+    </group>
+    <group android:id="@+id/terms_conditions">
+        <item
+            android:id="@+id/nav_terms_conditions"
+            android:icon="@drawable/ic_call_color"
+            android:title="@string/terms_conditions" />
+    </group>
+</menu>

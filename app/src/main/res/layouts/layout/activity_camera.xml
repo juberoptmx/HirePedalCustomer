@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:id="@+id/layout">
+
+    <FrameLayout android:id="@+id/preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <FrameLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="gone"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#AA000000"
+        >
+
+        <ImageView android:layout_width="60dp"
+            android:layout_height="60dp" android:id="@+id/buttonClick"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_camera_shutter"
+            android:layout_margin="12dp"
+            android:visibility="visible"
+            android:background="#00000000"
+            />
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"
+            android:textStyle="bold"
+            android:text="Done"
+            android:layout_centerVertical="true"
+            style="@style/RegisterNowButton"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

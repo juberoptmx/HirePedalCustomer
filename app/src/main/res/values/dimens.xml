@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Text Sizes -->
+    <dimen name="btn_text_size_large">16sp</dimen>
+    <dimen name="title_text_size_small">15sp</dimen>
+
+    <dimen name="text_size_very_small">16sp</dimen>
+    <dimen name="text_size_very_smaller">14sp</dimen>
+    <dimen name="text_size_very_smallest">12sp</dimen>
+    <dimen name="text_chat_time">9sp</dimen>
+    <dimen name="text_size_small">18sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+
+    <dimen name="margin_top">6dp</dimen>
+
+
+    <dimen name="card_elevation">4dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">14dp</dimen>
+    <dimen name="activity_vertical_margin">14dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!-- DashBoard Layout-->
+
+    <!--Navigation dimens-->
+
+    <!--Settings screen dimens-->
+    <!--<dititlename="setting_divider_height">1dp</dimen>-->
+
+    <!--Address screen-->
+
+    <!--List item addresses-->
+
+
+    <!--  landing screen icon size-->
+    <dimen name="job_icon_height">60dp</dimen>
+    <dimen name="job_icon_width">60dp</dimen>
+    <dimen name="job_icon_padding">10dp</dimen>
+
+    <!-- can size screen-->
+    <dimen name="can_image_padding">12dp</dimen>
+    <dimen name="line_margin">8dp</dimen>
+
+    <!--FCM NotificationMessage-->
+    <dimen name="standard_field_width">200dp</dimen>
+    <dimen name="fab_margin">32dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="pin_number_size">40sp</dimen>
+
+</resources>

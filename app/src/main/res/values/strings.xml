@@ -1,0 +1,444 @@
+<resources>
+    <string name="app_name">HirePedal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="shared_preference_name" translatable="false">Fastrack_SharedPreference</string>
+    <string name="user" translatable="false">user</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home">Home</string>
+    <string name="hirePedal">HirePedal</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="contact_name">Name</string>
+    <string name="text_message_hint">Type your message here</string>
+    <string name="my_apps">My Apps</string>
+    <string name="my_account">My Account</string>
+    <string name="about_us">About Us</string>
+    <string name="terms_conditions">Terms and Conditions</string>
+    <string name="about_me">About Me</string>
+
+
+    <string name="pref_feature">Feature Preference</string>
+    <string name="text_sign_up">Sign Up</string>
+    <string name="hint_name">*Name</string>
+    <string name="hint_mobile_number">*Mobile Number</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_blood_group">Blood Group</string>
+    <string name="hint_address1">Address Line 1</string>
+    <string name="hint_address2">Address Line 2</string>
+    <string name="hint_city">City</string>
+    <string name="hint_state">State</string>
+    <string name="hint_company">Company</string>
+    <string name="hint_designation">Designation</string>
+    <string name="hint_work_phone">Work Phone</string>
+    <string name="hint_work_email">Work Email</string>
+    <string name="text_submit">Submit</string>
+    <string name="title_contact_address">Contact Address</string>
+    <string name="title_hotel_address">Hotel Address</string>
+    <string name="title_my_location">My Location</string>
+    <string name="title_new_address">New Address</string>
+    <string name="title_my_tickets">My Tickets</string>
+    <string name="title_new_ticket">New Ticket</string>
+    <string name="title_record">Record</string>
+    <string name="text_tab_record">Record</string>
+    <string name="text_tab_recordings">Recordings</string>
+    <string name="title_todo_list">To Do List</string>
+    <string name="title_password_list">Password List</string>
+
+    <string name="hint_adhar_number">Adhar Number</string>
+    <string name="hint_driving_license">Driving License</string>
+    <string name="hint_pan_card">PAN Card</string>
+    <string name="hint_cas_card_number">CAS Card Number</string>
+    <string name="hint_eb_number">EB Number</string>
+    <string name="hint_todo_title">Enter Title</string>
+
+
+    <string-array name="gender">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="blood_group">
+        <item>Blood Group</item>
+        <item>O +ve</item>
+        <item>O -ve</item>
+        <item>A +ve</item>
+        <item>A -ve</item>
+        <item>B +ve</item>
+        <item>B -ve</item>
+        <item>AB +ve</item>
+        <item>AB -ve</item>
+    </string-array>
+
+    <string-array name="states">
+        <item>States</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chattisgarh</item>
+        <item>Chandigarh</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jarkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkhim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttaranchal</item>
+        <item>Uttar Pradesh</item>
+        <item>West Bengal</item>
+    </string-array>
+
+    <string name="text_save">Save</string>
+    <string name="text_delete">Delete</string>
+    <string name="hint_from">From</string>
+    <string name="hint_to">To</string>
+    <string name="hint_departure_date">Departure Date</string>
+    <string name="hint_departure_time">Departure Time</string>
+    <string name="hint_address_title">Title</string>
+    <string name="hint_address_description">Description</string>
+    <string name="hint_address_city">City</string>
+    <string name="hint_address_zip">Zip Code</string>
+    <string name="hint_address_contact_name">Contact Name</string>
+    <string name="hint_address_contact_number">Contact Number</string>
+    <string name="hint_boarding_comments">Comments</string>
+
+    <string name="cart_list">Cart Details</string>
+    <string name="item_detail">Item Details</string>
+
+    <string name="camera_permission_setting">In order to take pictures using the app, you need to grant us access to the camera permission for your device. Under Settings, you can enable this </string>
+    <string name="camera_permission">This app uses the camera permission to let you take pictures of documents.</string>
+    <string name="file_permission_setting">In order to take and upload pictures using the app, you need to grant us access to the storage permission for your device. Under Settings, you can enable this permission.</string>
+    <string name="file_permission">This app uses the storage permission to let you take and upload pictures of documents.</string>
+    <string name="audio_permission">This app uses the microphone and storage permission to let you record audio clips.</string>
+    <string name="audio_permission_setting">In order to record audio clips using the app, you need to grant us access to the microphone and storage permission for your device. Under Settings, you can enable this permission.</string>
+
+    <string name="pref_boarding_pass">boardingPass</string>
+    <string name="pref_my_address">myAddress</string>
+
+    <string name="pref_my_apps">myApps</string>
+    <string name="pref_my_fitness">myFitness</string>
+    <string name="pref_at_home">atHome</string>
+    <string name="pref_at_office">atOffice</string>
+    <string name="pref_my_payment">myPayment</string>
+
+
+
+    <string name="pref_at_home_wifi">atHomeWifiStatus</string>
+    <string name="pref_at_home_bluetooth">atHomeBluetoothStatus</string>
+    <string name="pref_at_office_wifi">atOfficeWifiStatus</string>
+    <string name="pref_at_office_bluetooth">atOfficeBluetoothStatus</string>
+    <string name="pref_file_path">filePath</string>
+    <string name="pref_hotel_address">hotelAddress</string>
+    <string name="pref_my_location">myLocation</string>
+    <string name="pref_my_tickets">myTickets</string>
+    <string name="pref_in_dark">inDark</string>
+    <string name="pref_aides_memories">aidesMemories</string>
+    <string name="pref_my_recordings">myRecordings</string>
+    <string name="pref_todo_list">todoList</string>
+    <string name="pref_password_locker">passwordlocker</string>
+    <string name="pref_password_list">passwordList</string>
+    <string name="pref_hush_hush">hushHushPref</string>
+
+    <string name="indark_torch">Torch</string>
+    <string name="indark_sms">Read SMS</string>
+    <string name="indark_clock">Read Clock</string>
+
+    <string name="aides_memories_alarm">Set Alarm</string>
+    <string name="aides_memories_stop_watch">Stop Watch</string>
+    <string name="aides_memories_to_do_list">To Do List</string>
+
+    <string name="pref_about_me_data">aboutMeData</string>
+    <string name="pref_my_account_data">myAccountData</string>
+    <string name="thinking_of_you_data">thinkingOfYouData</string>
+    <string name="text_someone_data">textSomeoneData</string>
+    <string name="call_someone_data">callSomeoneData</string>
+    <string name="find_me_data">findMeData</string>
+
+    <string name="hash_key_about_me_aadhar">aboutMeAadharCard</string>
+    <string name="hash_key_about_me_driving_license">aboutMeDrivingLicense</string>
+    <string name="hash_key_about_me_pan_card">aboutMePanCard</string>
+    <string name="hash_key_about_me_cas_number">aboutMeCasNumber</string>
+    <string name="hash_key_about_me_eb_number">aboutMeEbNumber</string>
+    <string name="pref_nfc_tags">nfcTags</string>
+
+
+
+
+
+
+
+    <string-array name="countries">
+        <item>Countries</item>
+        <item>India</item>
+        <item>Afghanistan</item>
+        <item>Aland Islands</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>American Samoa</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Anguilla</item>
+        <item>Antarctica</item>
+        <item>Antigua and Barbuda</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Aruba</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>Bahamas</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bermuda</item>
+        <item>Bhutan</item>
+        <item>Bolivia</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>Botswana</item>
+        <item>Bouvet Island</item>
+        <item>BQ</item>
+        <item>Brazil</item>
+        <item>British Indian Ocean Territory</item>
+        <item>British Virgin Islands</item>
+        <item>Brunei Darussalam</item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Burundi</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Cape Verde</item>
+        <item>Cayman Islands</item>
+        <item>Central African Republic</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Christmas Island</item>
+        <item>Cocos (Keeling) Islands</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Congo (Brazzaville)</item>
+        <item>Congo, Democratic Republic of the</item>
+        <item>Cook Islands</item>
+        <item>Costa Rica</item>
+        <item>Côte d\'Ivoire</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Curacao</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>Denmark</item>
+        <item>Djibouti</item>
+        <item>Dominica</item>
+        <item>Dominican Republic</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Equatorial Guinea</item>
+        <item>Eritrea</item>
+        <item>Estonia</item>
+        <item>Ethiopia</item>
+        <item>Falkland Islands (Malvinas)</item>
+        <item>Faroe Islands</item>
+        <item>Fiji</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>French Guiana</item>
+        <item>French Polynesia</item>
+        <item>French Southern Territories</item>
+        <item>Gabon</item>
+        <item>Gambia</item>
+        <item>Georgia</item>
+        <item>Germany</item>
+        <item>Ghana</item>
+        <item>Gibraltar</item>
+        <item>Greece</item>
+        <item>Greenland</item>
+        <item>Grenada</item>
+        <item>Guadeloupe</item>
+        <item>Guam</item>
+        <item>Guatemala</item>
+        <item>Guernsey</item>
+        <item>Guinea-Bissau</item>
+        <item>Guinea</item>
+        <item>Guyana</item>
+        <item>Haiti</item>
+        <item>Holy See (Vatican City State)</item>
+        <item>Honduras</item>
+        <item>Hong Kong, Special Administrative Region of China</item>
+        <item>Hungary</item>
+        <item>Iceland</item>
+        <item>Indonesia</item>
+        <item>Iran, Islamic Republic of</item>
+        <item>Iraq</item>
+        <item>Ireland</item>
+        <item>Isle of Man</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>Jamaica</item>
+        <item>Japan</item>
+        <item>Jersey</item>
+        <item>Jordan</item>
+        <item>Kazakhstan</item>
+        <item>Kenya</item>
+        <item>Kiribati</item>
+        <item>Korea, Democratic People\'s Republic of</item>
+        <item>Korea, Republic of</item>
+        <item>Kuwait</item>
+        <item>Kyrgyzstan</item>
+        <item>Lao PDR</item>
+        <item>Latvia</item>
+        <item>Lebanon</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Libya</item>
+        <item>Liechtenstein</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Macao, Special Administrative Region of China</item>
+        <item>Macedonia, Republic of</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Malaysia</item>
+        <item>Maldives</item>
+        <item>Mali</item>
+        <item>Malta</item>
+        <item>Marshall Islands</item>
+        <item>Martinique</item>
+        <item>Mauritania</item>
+        <item>Mauritius</item>
+        <item>Mayotte</item>
+        <item>Mexico</item>
+        <item>Micronesia, Federated States of</item>
+        <item>Moldova</item>
+        <item>Monaco</item>
+        <item>Mongolia</item>
+        <item>Montenegro</item>
+        <item>Montserrat</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Myanmar</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Nepal</item>
+        <item>Netherlands Antilles</item>
+        <item>Netherlands</item>
+        <item>New Caledonia</item>
+        <item>New Zealand</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>Niue</item>
+        <item>Norfolk Island</item>
+        <item>Northern Mariana Islands</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Pakistan</item>
+        <item>Palau</item>
+        <item>Palestinian Territory, Occupied</item>
+        <item>Panama</item>
+        <item>Papua New Guinea</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Pitcairn</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Puerto Rico</item>
+        <item>Qatar</item>
+        <item>Réunion</item>
+        <item>Romania</item>
+        <item>Russian Federation</item>
+        <item>Rwanda</item>
+        <item>Saint Helena</item>
+        <item>Saint Kitts and Nevis</item>
+        <item>Saint Lucia</item>
+        <item>Saint Pierre and Miquelon</item>
+        <item>Saint Vincent and Grenadines</item>
+        <item>Saint-Barthélemy</item>
+        <item>Saint-Martin (French part)</item>
+        <item>Samoa</item>
+        <item>San Marino</item>
+        <item>Sao Tome and Principe</item>
+        <item>Saudi Arabia</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>Seychelles</item>
+        <item>Sierra Leone</item>
+        <item>Singapore</item>
+        <item>Sint Maarten</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Solomon Islands</item>
+        <item>Somalia</item>
+        <item>South Africa</item>
+        <item>South Georgia and the South Sandwich Islands</item>
+        <item>South Sudan</item>
+        <item>Spain</item>
+        <item>Sri Lanka</item>
+        <item>Sudan</item>
+        <item>Suriname</item>
+        <item>Svalbard and Jan Mayen Islands</item>
+        <item>Swaziland</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Syrian Arab Republic (Syria)</item>
+        <item>Taiwan, Republic of China</item>
+        <item>Tajikistan</item>
+        <item>Tanzania, United Republic of</item>
+        <item>Thailand</item>
+        <item>Timor-Leste</item>
+        <item>Togo</item>
+        <item>Tokelau</item>
+        <item>Tonga</item>
+        <item>Trinidad and Tobago</item>
+        <item>Tunisia</item>
+        <item>Turkey</item>
+        <item>Turkmenistan</item>
+        <item>Turks and Caicos Islands</item>
+        <item>Tuvalu</item>
+        <item>Uganda</item>
+        <item>Ukraine</item>
+        <item>United Arab Emirates</item>
+        <item>United Kingdom</item>
+        <item>United States of America</item>
+        <item>Uruguay</item>
+        <item>Uzbekistan</item>
+        <item>Vanuatu</item>
+        <item>Venezuela (Bolivarian Republic of)</item>
+        <item>Viet Nam</item>
+        <item>Virgin Islands, US</item>
+        <item>Wallis and Futuna Islands</item>
+        <item>Western Sahara</item>
+        <item>Yemen</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
+    </string-array>
+
+
+    <string name="enter_pin_label">Enter PIN</string>
+    <string name="enter_pin_button_label">Enter</string>
+
+</resources>

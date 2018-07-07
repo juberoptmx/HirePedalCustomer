@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+    <EditText
+        android:id="@+id/et_address_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_address_title"
+        android:background="@drawable/drawable_background"
+        android:inputType="textCapWords"
+        android:layout_margin="8dp"
+        />
+
+    <EditText
+        android:id="@+id/et_address_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_address_description"
+        android:background="@drawable/drawable_background"
+        android:layout_margin="8dp"
+        android:inputType="textCapWords"/>
+
+    <EditText
+        android:id="@+id/et_address_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_address1"
+        android:background="@drawable/drawable_background"
+        android:layout_margin="8dp"
+        android:inputType="textCapWords"/>
+
+    <EditText
+        android:id="@+id/et_address_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_address2"
+        android:background="@drawable/drawable_background"
+        android:layout_margin="8dp"
+        android:inputType="textCapWords"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        >
+    <EditText
+        android:id="@+id/et_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_city"
+        android:inputType="textCapWords"
+        android:background="@drawable/drawable_background"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+    <EditText
+        android:id="@+id/et_zipcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_address_zip"
+        android:inputType="number"
+        android:background="@drawable/drawable_background"
+        android:maxLength="6"
+        android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/sp_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/states"
+            android:layout_weight="1"/>
+
+    <Spinner
+        android:id="@+id/sp_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/countries"
+        android:visibility="gone"
+        android:layout_weight="0"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_address_contact_name"
+        android:background="@drawable/drawable_background"
+        android:layout_margin="8dp"
+        android:inputType="textCapWords"/>
+
+    <EditText
+        android:id="@+id/et_contact_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_address_contact_number"
+        android:background="@drawable/drawable_background"
+        android:layout_margin="8dp"
+        android:maxLength="10"
+        android:inputType="phone"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <FrameLayout
+            android:id="@+id/mapParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/mapContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|top" >
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/center_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="10dp"
+                android:src="@drawable/ic_location"/>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_save_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="@string/text_save"/>
+
+    </LinearLayout>
+
+</ScrollView>

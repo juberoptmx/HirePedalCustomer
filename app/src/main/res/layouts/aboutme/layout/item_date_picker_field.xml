@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/date_picker_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="55dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_layout_date_picker_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="51dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        app:hintAnimationEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edit_text_date_picker_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/color_black"
+            android:enabled="true"
+            android:minHeight="51dp"
+            android:textColor="@drawable/edit_text_selector"
+            android:textSize="16sp"
+            app:hintAnimationEnabled="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/img_date_picker_edit_text_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_calander_active"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/text_layout_date_picker_field"
+        app:layout_constraintEnd_toEndOf="@+id/text_layout_date_picker_field"
+        app:layout_constraintTop_toBottomOf="@+id/text_layout_date_picker_field" />
+
+    <Button
+        android:id="@+id/btn_date_picker_select"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:alpha="0"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="NetworkAlertView_background_color">#b2b2b2</color>
+    <color name="NetworkAlertView_text_color">#ffffff</color>
+    <color name="activity_background_color">#FFFFFF</color>
+    <color name="colorPrimary">#00AFAE</color>
+    <color name="colorPrimaryDark">#135D72</color>
+    <color name="colorAccent">#505050</color>
+    <color name="color_gray">#9a9a9a</color>
+    <color name="color_white">#ffffff</color>
+    <color name="dashboard_card_title">#2d2d2d</color>
+    <!--Add location colors-->
+    <color name="color_black">#000</color>
+    <color name="sub_text">#a8a8a8</color>
+    <color name="fade_out_radio">#a8a8a8</color>
+    <color name="edit_text_hint_color">#CCCCCC</color>
+    <color name="reg_devider_color">#CCCCCC</color>
+    <color name="et_bg_color">#FFFFFF</color>
+    <color name="et_border_disable_color">#A6A6A7</color>
+    <color name="login_edittext_color">#E8E8E8</color>
+    <color name="add_member_button_color">#DCDCDC</color>
+    <color name="hamburger_text_font">#404041</color>
+    <color name="hamburger_gray_font">#cccbcb</color>
+    <color name="color_orange">#00AFAE</color>
+    <color name="color_background">#2b2c2b</color>
+    <color name="color_lightwhite">#80ffffff</color>
+    <color name="color_divider">#ccc</color>
+    <!-- Primary Colours -->
+    <color name="color_primary_orange">#00AFAE</color>
+    <color name="color_primary_black">#135D72</color>
+    <color name="color_primary_dark_gray">#505050</color>
+    <!-- Secondary Colours -->
+    <color name="color_secondary_gray">#AFAFAF</color>
+    <color name="color_secondary_light_gray">#DADDE1</color>
+    <color name="color_secondary_ultra_light_gray">#F3F3F3</color>
+    <color name="color_secondary_white">#FFFFFF</color>
+    <color name="color_grey_gradient">#DADDE1</color>
+    <color name="color_toolbar">#00AFAE</color>
+    <color name="color_toolbar_title">#505050</color>
+
+    <color name="edit_text_enabled_color">#F7FE2E</color>
+    <color name="edit_text_disabled_color">#000000</color>
+
+</resources>

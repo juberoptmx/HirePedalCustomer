@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_secondary_white"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_gradient_primary_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/nav_user_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile" />
+
+                <TextView
+                    android:id="@+id/user_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:inputType="textNoSuggestions"
+                    android:layout_below="@id/nav_user_image"
+                    android:text="User Name"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/text_size_very_smaller" />
+
+                <TextView
+                    android:id="@+id/user_mailid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_first_name"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:inputType="textNoSuggestions"
+                    android:maxLines="1"
+                    android:text="username@hirepedal.com"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/text_size_very_smallest"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
