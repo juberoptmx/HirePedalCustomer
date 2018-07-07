@@ -22,7 +22,7 @@ class CartAdapter(internal var context: Context, private var cartList:List<CartI
     private val fragmentCommunicator = context as FragmentCommunicator
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
-        //  getCartItems()
+        getCartItems()
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_cart,parent,false)
         return CartViewHolder(view)
     }
@@ -31,7 +31,7 @@ class CartAdapter(internal var context: Context, private var cartList:List<CartI
         var cartItemList = ArrayList<String>()
 
         try {
-            cartItemList = Gson().fromJson<ArrayList<String>>(SharedPreferenceManager.getCartDeta(RootActivity.rootActivity), object : TypeToken<ArrayList<String>>() {}.type)
+            cartItemList = Gson().fromJson<ArrayList<String>>(SharedPreferenceManager.getCartData(RootActivity.rootActivity), object : TypeToken<ArrayList<String>>() {}.type)
         }catch (e:Exception){
             cartItemList = ArrayList<String>()
         }

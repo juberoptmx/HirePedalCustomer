@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import com.google.gson.Gson;
 import com.hirepedal.customer.R;
+import com.hirepedal.customer.cart.CartItem;
 import com.hirepedal.customer.models.User;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,16 +32,16 @@ public class SharedPreferenceManager {
         return getSharedPreference(context).getString(context.getString(R.string.user), null);
     }
 
-    public static void saveFeaturePreference(Context context,String feature){
-        getSharedPreferenceEditor(context).putString(context.getString(R.string.pref_feature),feature).commit();
-    }
-
     public static String getFeaturePreference(Context context){
         return getSharedPreference(context).getString(context.getString(R.string.pref_feature),null);
     }
 
-    public static String getCartDeta(Context context){
-        return getSharedPreference(context).getString(context.getString(R.string.pref_my_apps),null);
+    public static void saveCartData(Context context, CartItem cartItem) {
+        getSharedPreferenceEditor(context).putString(context.getString(R.string.cart), new Gson().toJson(cartItem)).commit();
+    }
+
+    public static String getCartData(Context context) {
+        return getSharedPreference(context).getString(context.getString(R.string.cart), null);
     }
 
 

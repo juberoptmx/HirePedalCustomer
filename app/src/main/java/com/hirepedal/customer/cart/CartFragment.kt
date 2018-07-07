@@ -1,17 +1,15 @@
 package com.hirepedal.customer.cart
 
 
-import android.content.pm.PackageManager
+
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.hirepedal.customer.R
-import com.hirepedal.customer.R.id.rv_cart
 import com.hirepedal.customer.activities.RootActivity
 import com.hirepedal.customer.base.BaseFragment
-import com.hirepedal.customer.utils.AppInfo
 import java.util.*
 import kotlinx.android.synthetic.main.fragment_cart.*
 
@@ -28,6 +26,7 @@ class CartFragment: BaseFragment(), CartListener {
 
     private fun getCartItems() {
 
+        // Static
         // Hercules
         cartItemList.add(CartItem("Sangam Cycle Shop", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_cycle),
                 "Roadsters", 1, "Jayanagar", resources.getDrawable(R.drawable.ic_hercules_c1),
