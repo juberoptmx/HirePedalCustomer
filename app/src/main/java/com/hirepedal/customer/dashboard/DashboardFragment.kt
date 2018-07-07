@@ -87,15 +87,16 @@ class DashboardFragment : BaseFragment(), GoogleApiClient.ConnectionCallbacks, G
         setUpMap()
     }
 
+
+
     private fun placeMarkerOnMap(location: LatLng) {
-        val markerOptions = MarkerOptions().position(location)
+        val markerOptions = MarkerOptions().position(location).title("Your Location")
         val titleStr = getAddress(location)
         markerOptions.icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory.decodeResource(resources, R.drawable.ic_user_location)))
         //        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
-        //        map.addMarker(markerOptions)
-        markerOptions.title(titleStr)
-
+      //  markerOptions.title(titleStr)
         map.addMarker(markerOptions)
+
     }
 
     private fun getAddress(latLng: LatLng): String {
@@ -189,6 +190,7 @@ class DashboardFragment : BaseFragment(), GoogleApiClient.ConnectionCallbacks, G
     }
 
     private fun setUpMap() {
+
         if (ActivityCompat.checkSelfPermission(context!!,
                         android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(activity!!,
