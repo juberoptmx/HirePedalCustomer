@@ -31,7 +31,7 @@ class CartAdapter(internal var context: Context, private var cartList:List<CartI
         var cartItemList = ArrayList<String>()
 
         try {
-            cartItemList = Gson().fromJson<ArrayList<String>>(SharedPreferenceManager.getMyApps(RootActivity.rootActivity), object : TypeToken<ArrayList<String>>() {}.type)
+            cartItemList = Gson().fromJson<ArrayList<String>>(SharedPreferenceManager.getCartDeta(RootActivity.rootActivity), object : TypeToken<ArrayList<String>>() {}.type)
         }catch (e:Exception){
             cartItemList = ArrayList<String>()
         }
